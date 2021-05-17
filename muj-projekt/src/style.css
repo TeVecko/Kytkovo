@@ -16,14 +16,46 @@ html {
 
 header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 4rem;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
-.logo {
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+nav {
   width: 10rem;
-  height: 10rem;
-  background-image: url(./img/rocket.svg);
+  padding: 1rem;
+}
+
+.nav-btn {
+  width: 3rem;
+  height: 3rem;
+  background-image: url('./img/menu_hamburger.png');
   background-size: contain;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-btn--opened {
+  background-image: url('./img/close.png');
+}
+
+.hamburger-opened a {
+  display: block;
+  justify-content: center;
+  flex-basis: 100%;
+}
+
+.hamburger-closed {
+  display: none;
+}
+
+.hamburger-opened {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
