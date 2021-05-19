@@ -26,14 +26,9 @@ header {
   align-items: flex-end;
 }
 
-nav {
-  width: 10rem;
-  padding: 1rem;
-}
-
 .nav-btn {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   background-image: url('./img/menu_hamburger.png');
   background-size: contain;
   background-color: transparent;
@@ -44,12 +39,6 @@ nav {
   background-image: url('./img/close.png');
 }
 
-.hamburger-opened a {
-  display: block;
-  justify-content: center;
-  flex-basis: 100%;
-}
-
 .hamburger-closed {
   display: none;
 }
@@ -58,4 +47,5 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: right;
 }
