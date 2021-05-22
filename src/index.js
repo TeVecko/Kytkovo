@@ -1,4 +1,5 @@
 import './style.css';
+import { Plant } from './Plant/Plant';
 
 console.log('funguju!');
 
@@ -10,3 +11,10 @@ menu.addEventListener('click', (event) => {
   const iconCross = document.querySelector('.nav-btn');
   iconCross.classList.toggle('nav-btn--opened');
 });
+
+const overviewElm = document.querySelector('#overview');
+overviewElm.appendChild(
+  Plant({
+    nazev: 'Máta',
+  }),
+);
