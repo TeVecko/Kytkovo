@@ -12,7 +12,7 @@ menu.addEventListener('click', (event) => {
   iconCross.classList.toggle('nav-btn--opened');
 });
 
-const overviewElm = document.querySelector('#overview');
+const overviewElm = document.querySelector('#');
 overviewElm.appendChild(
   Plant({
     nazev: 'Máta',
