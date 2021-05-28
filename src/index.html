@@ -8,19 +8,49 @@
   <body>
     <div id="app" class="container">
       <header>
-        <h1>Kytkovo</h1>
-        <div class="navigation">
+        <div class="navigation" id="navigation">
           <button class="nav-btn"></button>
           <nav class="hamburger-closed" id="hamburger">
-            <a href="overview.html">Přehled rostlin</a>
-            <a href="planner.html">Plánovač</a>
-            <a href="#">Blog</a>
-            <a href="#">O projektu</a>
+            <a class="link" href="overview.html">Přehled kytek</a>
+            <a class="link" href="planner.html">Plánovač</a>
+            <a class="link" href="#">Blog</a>
+            <a class="link" href="#">O projektu</a>
           </nav>
         </div>
+        <div class="hp-text">
+          <h1 class="hp-text__heading">Kytkovo</h1>
+          <p class="hp-text__description">
+            Průvodce světem kytek a jejich pěstováním
+          </p>
+        </div>
+        <div class="arrow-down bounce" href="#main"></div>
       </header>
-      <main></main>
-      <footer>
+      <main id="main">
+        <div class="hp-content">
+          <div class="hp-content__item">
+            <h2 class="hp-content__item__heading">Přehled kytek</h2>
+            <p class="hp-content__item__description">
+              Najdi si ty nejvhodnější kytky pro pěstování
+            </p>
+            <div class="arrow-right"></div>
+          </div>
+          <div class="hp-content__item">
+            <h2 class="hp-content__item__heading">Plánovač</h2>
+            <p class="hp-content__item__description">
+              Naplánuj si, jak budeš pečovat o své kytky
+            </p>
+            <div class="arrow-right"></div>
+          </div>
+          <div class="hp-content__item">
+            <h2 class="hp-content__item__heading">Blog</h2>
+            <p class="hp-content__item__description">
+              Přečti si něco zajímavého o pěstování kytek
+            </p>
+            <div class="arrow-right"></div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
         <p>Czechitas, Digitální akademie: Web</p>
       </footer>
     </div>
