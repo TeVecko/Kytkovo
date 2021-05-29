@@ -84,6 +84,7 @@ body {
   font-family: 'Dancing Script', cursive;
   text-align: center;
   margin: 0;
+  padding: 0 2rem 0 2rem;
 }
 
 .hp-text__description {
@@ -259,16 +260,41 @@ body {
   }
 }
 
+/* Styly pro overview.html */
+.plant {
+  text-align: center;
+  width: 100%;
+  padding: 2rem 2rem 2rem 2rem;
+  position: relative;
+}
+
 .image-flowering {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
   display: none;
-  width: 5rem;
-  height: 5rem;
-  background-size: contain;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.3rem;
+  transform: translate(30%, -30%);
+  border: 1px solid rgb(131, 124, 97);
+  border: 2px solid #fff;
   border-radius: 50%;
-  background-image: url('./img/flower.svg');
+  background-color: #f8ba33;
+  /*
+  border: 1px solid rgb(131, 124, 97);
+  border-radius: 50%;
+  background-color: rgb(131, 124, 97);
+  border: 1px solid ;
+  background-size: contain;
+  background-image: url('./img/jasmine.svg');
+  border-radius: 50%;
   background-color: rgb(207, 66, 207);
   filter: invert(100%);
   border: 2px solid white;
+  color: black;
+  font-size: 2rem;
+  */
 }
 
 .visible {
@@ -276,7 +302,30 @@ body {
 }
 
 .image-plant {
-  width: 10rem;
-  height: 10rem;
-  background-size: contain;
+  width: 100%;
+  height: auto;
+}
+
+.name-plant {
+  margin: 2rem 0;
+}
+
+.link-to-plant {
+  text-decoration: none;
+  background-color: rgb(131, 124, 97);
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 2rem 0 1rem 0;
+}
+
+@media (min-width: 791px) {
+  .main-overview {
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .plant {
+    max-width: calc(100% / 3);
+  }
 }

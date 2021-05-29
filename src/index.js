@@ -30,7 +30,7 @@ const december = 11;
 const mint = Plant({
   name: 'Máta klasnatá',
   latinName: 'Mentha spicata',
-  src: './img/moroccan-mint.jpg',
+  src: './img/mint-table.jpg',
   flowering: [june, july, august, september],
   href: 'Plants/mint.html',
 });
@@ -45,7 +45,7 @@ const mandevila = Plant({
 const potosovec = Plant({
   name: 'Potosovec zlatý',
   latinName: 'Epipremnum aureum',
-  src: './img/potosovec.jpg',
+  src: './img/pothos-unsplash.jpg',
   flowering: [],
 });
 

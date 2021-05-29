@@ -9,6 +9,7 @@ export const Plant = (props) => {
 
   const nameElm = document.createElement('h2');
   nameElm.textContent = props.name;
+  nameElm.classList.add('name-plant');
 
   const latinNameElm = document.createElement('h2');
   latinNameElm.textContent = props.latinName;
@@ -19,6 +20,8 @@ export const Plant = (props) => {
 
   const imgFlowering = document.createElement('img');
   imgFlowering.classList.add('image-flowering');
+  imgFlowering.src = 'img/blossom-icon-edited.svg';
+  imgFlowering.title = 'právě kvete';
   const flowering = props.flowering;
   for (let i = 0; i < flowering.length; i++) {
     const floweringI = flowering[i];
@@ -32,13 +35,13 @@ export const Plant = (props) => {
   }
 
   const arrow = document.createElement('a');
-  arrow.classList.add('arrow');
+  arrow.classList.add('link-to-plant');
   arrow.href = props.href;
-  arrow.textContent = 'šipka';
+  arrow.textContent = 'více';
 
-  plantElm.appendChild(nameElm);
-  plantElm.appendChild(latinNameElm);
   plantElm.appendChild(imgPlant);
+  plantElm.appendChild(nameElm);
+  //plantElm.appendChild(latinNameElm);
   plantElm.appendChild(imgFlowering);
   plantElm.appendChild(arrow);
 
