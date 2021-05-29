@@ -10,12 +10,12 @@ export const Article = (props) => {
   imgPlant.src = props.src;
 
   const arrow = document.createElement('a');
-  arrow.classList.add('arrow');
+  arrow.classList.add('link-to-plant');
   arrow.href = props.href;
-  arrow.textContent = 'šipka';
+  arrow.textContent = 'více';
 
-  plantElm.appendChild(nameElm);
   plantElm.appendChild(imgPlant);
+  plantElm.appendChild(nameElm);
   plantElm.appendChild(arrow);
 
   return plantElm;
