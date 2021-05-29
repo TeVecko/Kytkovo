@@ -126,6 +126,36 @@ header {
   margin-bottom: 2rem;
 }
 
+.icon-list,
+.icon-calendar,
+.icon-book {
+  filter: invert(100%);
+  height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-list {
+  background-image: url('./img/list-alt-solid.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-calendar {
+  background-image: url('./img/calendar-week-solid.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-book {
+  background-image: url('./img/book-reader-solid.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hp-content-click {
+  text-decoration: none;
+}
+
 .hp-content__item__heading,
 .hp-content__item__description {
   color: white;
