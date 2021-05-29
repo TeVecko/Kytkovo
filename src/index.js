@@ -14,9 +14,25 @@ menu.addEventListener('click', (event) => {
   topStripe.classList.toggle('stripe-opened');
 });
 
-const overviewElm = document.querySelector('#');
-overviewElm.appendChild(
-  Plant({
-    nazev: 'Máta',
-  }),
-);
+const january = 0;
+const february = 1;
+const march = 2;
+const april = 3;
+const may = 4;
+const june = 5;
+const july = 6;
+const august = 7;
+const september = 8;
+const october = 9;
+const november = 10;
+const december = 11;
+
+const mint = Plant({
+  name: 'Máta',
+  latinName: 'Mentha',
+  src: './img/moroccan-mint.jpg',
+  flowering: [april, june, may],
+});
+
+const overviewElm = document.querySelector('#overview');
+overviewElm.appendChild(mint);
