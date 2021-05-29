@@ -19,7 +19,7 @@ body {
   margin-left: auto;
 }
 
-header {
+.hp-header {
   background-image: url('./img/cover-photo-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -196,6 +196,7 @@ header {
 @media (min-width: 791px) {
   .hp-content {
     display: flex;
+    justify-content: space-around;
     padding-right: 0;
   }
 
