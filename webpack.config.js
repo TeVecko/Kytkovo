@@ -50,6 +50,7 @@ module.exports = {
         { from: 'src/favicon.ico', to: '', noErrorOnMissing: true },
         { from: 'src/*.html', to: '[name].html' },
         { from: 'src/Plants/*.html', to: 'Plants/[name].html' },
+        { from: 'src/Articles/*.html', to: 'Articles/[name].html' },
       ],
     }),
   ],

@@ -1,4 +1,8 @@
 export const Plant = (props) => {
+  const library = document.querySelector('#overview');
+  if (!library) {
+    return;
+  }
   const dnes = dayjs();
 
   const soucasnyMesic = new Date(dnes);

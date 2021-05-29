@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kytkovo</title>
+    <title>Přehled kytek | Kytkovo</title>
   </head>
   <body>
     <div id="app" class="container">
-      <header>
+      <header class="hp-header">
         <div class="navigation" id="navigation">
           <button class="nav-btn"></button>
           <nav class="hamburger-closed" id="hamburger">
@@ -18,19 +18,42 @@
           </nav>
         </div>
         <div class="hp-text">
-          <h1 class="hp-text__heading">Kytkovo</h1>
+          <h1 class="hp-text__heading">Přehled kytek</h1>
           <p class="hp-text__description">
-            Průvodce světem kytek a jejich pěstováním
+            Najdi si ty nejvhodnější kytky pro pěstování
           </p>
         </div>
-        <a class="arrow-down bounce" href="#main"></a>
+        <a class="arrow-down bounce" href="#view-plant"></a>
       </header>
-      <main id="main"></main>
+      <main class="view-plant" id="view-plant">
+        <div class="plant-image">
+          <img
+            class="plant-image__photo"
+            src="../img/moroccan-mint.jpg"
+            title="Máta"
+            alt="Máta klasnatá"
+          />
+        </div>
+        <div class="plant-describe">
+          <h1 class="title-plant">Máta klasnatá</h1>
+          <h2 class="title-plant__latin"><em>Mentha spicata</em></h2>
+          <ul>
+            <li><strong>Typ:</strong> bylinka</li>
+            <li><strong>Náročnost:</strong> nenáročná</li>
+            <li><strong>Nároky na světlo:</strong> plné slunce až polostín</li>
+            <li><strong>Nároky na vláhu:</strong> střední</li>
+            <li><strong>Nároky na vláhu:</strong> střední</li>
+            <li><strong>Výška rostliny:</strong> 0,6 m</li>
+            <li><strong>Kvetení:</strong> červenec–září</li>
+            <li><strong>Jedovatá:</strong> ne</li>
+          </ul>
+        </div>
+      </main>
       <footer class="footer">
         <p>Czechitas, Digitální akademie: Web</p>
       </footer>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"></script>
     <script src="/bundle.js"></script>
   </body>
 </html>

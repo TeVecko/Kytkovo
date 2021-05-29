@@ -1,5 +1,6 @@
 import './style.css';
 import { Plant } from './Plant/Plant';
+import { Article } from './Article/Article';
 
 console.log('funguju!');
 
@@ -55,4 +56,16 @@ if (library) {
   overviewElm.appendChild(mint);
   overviewElm.appendChild(mandevila);
   overviewElm.appendChild(potosovec);
+}
+
+const aphids = Article({
+  name: 'Jak se zbavit mšic',
+  src: './img/aphids.jpg',
+  href: 'Articles/aphids.html',
+});
+
+const articleElm = document.querySelector('#blog');
+const blog = document.querySelector('#blog');
+if (blog) {
+  articleElm.appendChild(aphids);
 }
