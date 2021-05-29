@@ -33,8 +33,10 @@ export const Plant = (props) => {
     }
   }
 
-  const arrow = document.createElement('button');
-  arrow.textContent = 'Zobrazit';
+  const arrow = document.createElement('a');
+  arrow.classList.add('arrow');
+  arrow.href = props.href;
+  arrow.textContent = 'šipka';
 
   plantElm.appendChild(nameElm);
   plantElm.appendChild(latinNameElm);

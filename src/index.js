@@ -32,6 +32,7 @@ const mint = Plant({
   latinName: 'Mentha spicata',
   src: './img/moroccan-mint.jpg',
   flowering: [june, july, august, september],
+  href: 'planner.html',
 });
 
 const mandevila = Plant({
