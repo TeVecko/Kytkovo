@@ -78,6 +78,11 @@ body {
   text-decoration: none;
 }
 
+.link__span:hover {
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid white;
+}
+
 .hp-text__heading {
   color: white;
   font-size: 5rem;
@@ -155,6 +160,10 @@ body {
 
 .hp-content-click {
   text-decoration: none;
+}
+
+.hp-content-click:hover {
+  filter: brightness(75%);
 }
 
 .hp-content__item__heading,
@@ -316,6 +325,10 @@ body {
   color: white;
   padding: 0.5rem 1rem;
   margin: 2rem 0 1rem 0;
+}
+
+.link-to-plant:hover {
+  filter: brightness(75%);
 }
 
 @media (min-width: 791px) {
