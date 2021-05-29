@@ -28,11 +28,27 @@ const november = 10;
 const december = 11;
 
 const mint = Plant({
-  name: 'Máta',
-  latinName: 'Mentha',
+  name: 'Máta klasnatá',
+  latinName: 'Mentha spicata',
   src: './img/moroccan-mint.jpg',
-  flowering: [april, june, may],
+  flowering: [june, july, august, september],
+});
+
+const mandevila = Plant({
+  name: 'Mandevila Sanderova',
+  latinName: 'Mandevilla sanderi',
+  src: './img/mandevila.jpg',
+  flowering: [may, june, july, august, september],
+});
+
+const potosovec = Plant({
+  name: 'Potosovec zlatý',
+  latinName: 'Epipremnum aureum',
+  src: './img/potosovec.jpg',
+  flowering: [],
 });
 
 const overviewElm = document.querySelector('#overview');
 overviewElm.appendChild(mint);
+overviewElm.appendChild(mandevila);
+overviewElm.appendChild(potosovec);
