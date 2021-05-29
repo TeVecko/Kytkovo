@@ -1,11 +1,9 @@
-const dnes = dayjs();
-
-const soucasnyMesic = new Date(dnes);
-const month = soucasnyMesic.getMonth();
-
-console.log(month); // 4
-
 export const Plant = (props) => {
+  const dnes = dayjs();
+
+  const soucasnyMesic = new Date(dnes);
+  const month = soucasnyMesic.getMonth();
+
   const plantElm = document.createElement('div');
   plantElm.classList.add('plant');
 

@@ -50,6 +50,9 @@ const potosovec = Plant({
 });
 
 const overviewElm = document.querySelector('#overview');
-overviewElm.appendChild(mint);
-overviewElm.appendChild(mandevila);
-overviewElm.appendChild(potosovec);
+const knihovna = document.querySelector('#overview');
+if (knihovna) {
+  overviewElm.appendChild(mint);
+  overviewElm.appendChild(mandevila);
+  overviewElm.appendChild(potosovec);
+}
