@@ -84,29 +84,31 @@ const lists = [
 ];
 
 const button = document.querySelector('.button-filter');
-button.addEventListener('click', function () {
-  const deleteAll = document.querySelectorAll('.plant');
-  deleteAll.forEach((plant) => {
-    plant.remove();
-  });
-  const type = document.getElementById('type');
-  const poison = document.getElementById('poison');
-  const valueType = type.value;
-  const valuePoison = poison.value;
+if (button) {
+  button.addEventListener('click', function () {
+    const deleteAll = document.querySelectorAll('.plant');
+    deleteAll.forEach((plant) => {
+      plant.remove();
+    });
+    const type = document.getElementById('type');
+    const poison = document.getElementById('poison');
+    const valueType = type.value;
+    const valuePoison = poison.value;
 
-  const result = lists.filter((list) => list.type === valueType);
-  const resultTwo = result.filter((list) => list.poison === valuePoison);
-  const jmena = resultTwo;
-  jmena.forEach((jmeno) => {
-    const overviewElm = document.querySelector('#overview');
-    const library = document.querySelector('#overview');
-    let name = jmeno.name;
+    const result = lists.filter((list) => list.type === valueType);
+    const resultTwo = result.filter((list) => list.poison === valuePoison);
+    const jmena = resultTwo;
+    jmena.forEach((jmeno) => {
+      const overviewElm = document.querySelector('#overview');
+      const library = document.querySelector('#overview');
+      let name = jmeno.name;
 
-    if (library) {
-      overviewElm.appendChild(Plant(listPlant[name]));
-    }
+      if (library) {
+        overviewElm.appendChild(Plant(listPlant[name]));
+      }
+    });
   });
-});
+}
 
 // Články
 const aphids = Article({
