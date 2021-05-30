@@ -16,9 +16,11 @@ menu.addEventListener('click', (event) => {
 });
 
 const btnPrint = document.querySelector('#btn-print');
-btnPrint.addEventListener('click', (event) => {
-  window.print();
-});
+if (btnPrint) {
+  btnPrint.addEventListener('click', (event) => {
+    window.print();
+  });
+}
 
 const january = 0;
 const february = 1;
