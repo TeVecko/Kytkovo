@@ -11,6 +11,13 @@ menu.addEventListener('click', (event) => {
   close.classList.toggle('nav-btn--opened');
   const topStripe = document.querySelector('#navigation');
   topStripe.classList.toggle('stripe-opened');
+  const arrowDown = document.querySelector('.arrow-down');
+  arrowDown.classList.toggle('arrow-down--hidden');
+});
+
+const btnPrint = document.querySelector('#btn-print');
+btnPrint.addEventListener('click', (event) => {
+  window.print();
 });
 
 const january = 0;

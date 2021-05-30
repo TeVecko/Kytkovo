@@ -31,6 +31,38 @@ body {
   justify-content: space-between;
 }
 
+.top-stripe-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+*/
+
+.logo-link {
+  height: 4rem;
+  width: 4rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin: 1rem 0 0 1rem;
+}
+
+.logo2 {
+  color: white;
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+  text-decoration: none;
+  margin: 0;
+  text-align: center;
+}
+
 .navigation {
   display: flex;
   flex-direction: column;
@@ -38,21 +70,57 @@ body {
 }
 
 .nav-btn {
-  width: 2rem;
+  width: 2.5rem;
   height: 2rem;
-  background-image: url('./img/menu_hamburger.png');
-  background-size: contain;
   background-color: transparent;
   border: none;
-  filter: invert(100%);
   margin-top: 1rem;
   margin-right: 1rem;
   cursor: pointer;
+  border-top: 0.22rem solid #fff;
+  border-bottom: 0.22rem solid #fff;
+  position: relative;
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(255, 255, 255);
+  width: 2.5rem;
+  height: 0.2rem;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
+}
+
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  width: 2.5rem;
+  height: 0.2rem;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
 }
 
 .nav-btn--opened {
-  background-image: url('./img/close.png');
-  filter: invert(100%);
+  /*background-image: url('./img/close.png');
+  filter: invert(100%);*/
+  position: fixed;
+  margin-top: 1.8rem;
+  margin-right: 1rem;
+  border: none;
+}
+
+.nav-btn--opened::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.nav-btn--opened::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .hamburger-closed {
@@ -65,22 +133,20 @@ body {
   justify-content: center;
   text-align: center;
   width: 100vw;
-  padding-bottom: 0.5rem;
+  height: 100vh;
 }
 
 .stripe-opened {
-  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  background-color: rgb(54, 54, 54);
 }
 
 .link {
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 1.5rem 0 1.5rem 0;
   color: white;
   text-decoration: none;
-}
-
-.link__span:hover {
-  padding-bottom: 0.6rem;
-  border-bottom: 2px solid white;
+  text-transform: uppercase;
 }
 
 .hp-text__heading {
@@ -107,6 +173,10 @@ body {
   height: 2rem;
   margin: 0 auto 1rem;
   cursor: pointer;
+}
+
+.arrow-down--hidden {
+  display: none;
 }
 
 .bounce {
@@ -217,19 +287,29 @@ body {
 }
 
 @media (min-width: 1000px) {
+  .logo {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+  }
+
   .nav-btn {
     display: none;
   }
 
   .hamburger-closed {
     display: flex;
-    padding: 1.5rem 2.5rem 0 0;
+    margin: 1.5rem 2.5rem 0 0;
   }
 
   .link {
     margin-left: 3rem;
     font-size: 1.1rem;
     text-transform: uppercase;
+  }
+
+  .link__span:hover {
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid white;
   }
 }
 
@@ -386,5 +466,28 @@ body {
   }
   .plant-describe {
     margin: 5rem 2rem;
+  }
+}
+
+/* Styly pro planner.html */
+.planner-form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media print {
+  .hp-header,
+  .planner-description,
+  .btn-print,
+  .footer {
+    display: none;
+  }
+
+  @page {
+    margin: 0;
+  }
+
+  body {
+    margin: 1.6cm;
   }
 }
