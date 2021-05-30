@@ -1,4 +1,5 @@
 export const Plant = (props) => {
+  // console.log(props);
   const library = document.querySelector('#overview');
   if (!library) {
     return;
@@ -29,12 +30,12 @@ export const Plant = (props) => {
   const flowering = props.flowering;
   for (let i = 0; i < flowering.length; i++) {
     const floweringI = flowering[i];
-    console.log(floweringI);
+    // console.log(floweringI);
     if (month === floweringI) {
       imgFlowering.className += ' visible';
-      console.log(true);
+      // console.log(true);
     } else {
-      console.log(false);
+      // console.log(false);
     }
   }
 

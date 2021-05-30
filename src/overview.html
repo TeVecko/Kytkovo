@@ -25,7 +25,26 @@
         </div>
         <a class="arrow-down bounce" href="#overview"></a>
       </header>
-      <main class="main-overview" id="overview"></main>
+      <main class="main-overview" id="overview">
+        <form class="form-filter" id="form-filter">
+          <div class="select-type">
+            <select name="type" id="type">
+              <option value>Vyberte</option>
+              <option value="bylinky">Bylinky</option>
+              <option value="pokojovky">Pokojovky</option>
+              <option value="venkovky">Venkovky</option>
+            </select>
+          </div>
+          <div class="poison">
+            <select name="poison" id="poison">
+              <option value>Vyberte</option>
+              <option value="true">Ano</option>
+              <option value="false">Ne</option>
+            </select>
+          </div>
+          <span class="button-filter">Odeslat</span>
+        </form>
+      </main>
       <footer class="footer">
         <p>Czechitas, Digitální akademie: Web</p>
       </footer>
