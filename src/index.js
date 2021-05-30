@@ -50,6 +50,22 @@ const listPlant = {
     flowering: [may, june, july, august, september],
     href: '',
   },
+  mandrake: {
+    name: 'Mandragora lékařská',
+    latinName: 'Mandragora officinarum',
+    src: './img/mandrake.jpg',
+    flowering: [
+      september,
+      october,
+      november,
+      december,
+      january,
+      february,
+      march,
+      april,
+    ],
+    href: '',
+  },
   potosovec: {
     name: 'Potosovec zlatý',
     latinName: 'Epipremnum aureum',
@@ -71,16 +87,53 @@ const library = document.querySelector('#overview');
 if (library) {
   overviewElm.appendChild(Plant(listPlant.mint));
   overviewElm.appendChild(Plant(listPlant.mandevila));
+  overviewElm.appendChild(Plant(listPlant.mandrake));
   overviewElm.appendChild(Plant(listPlant.potosovec));
   overviewElm.appendChild(Plant(listPlant.sunflower));
 }
 
 // Filtrování
 const lists = [
-  { name: 'mint', type: 'bylinky', poison: 'false' },
-  { name: 'mandevila', type: 'venkovky', poison: 'true' },
-  { name: 'potosovec', type: 'pokojovky', poison: 'true' },
-  { name: 'sunflower', type: 'venkovky', poison: 'false' },
+  {
+    name: 'mint',
+    type: 'bylinky',
+    difficult: 'false',
+    sun: 'polostín',
+    water: 'vyšší',
+    poison: 'false',
+  },
+  {
+    name: 'mandevila',
+    type: 'venkovky',
+    difficult: 'false',
+    sun: 'polostín',
+    water: 'střední',
+    poison: 'true',
+  },
+  {
+    name: 'mandrake',
+    type: 'bylinky',
+    difficult: 'false',
+    sun: 'polostín',
+    water: 'střední',
+    poison: 'true',
+  },
+  {
+    name: 'potosovec',
+    type: 'pokojovky',
+    difficult: 'false',
+    sun: 'polostín',
+    water: 'střední',
+    poison: 'true',
+  },
+  {
+    name: 'sunflower',
+    type: 'venkovky',
+    difficult: 'true',
+    sun: 'plné slunce',
+    water: 'vyšší',
+    poison: 'false',
+  },
 ];
 
 const button = document.querySelector('.button-filter');
@@ -91,13 +144,27 @@ if (button) {
       plant.remove();
     });
     const type = document.getElementById('type');
+    const difficulty = document.getElementById('difficulty');
+    const sun = document.getElementById('sun');
+    const water = document.getElementById('water');
     const poison = document.getElementById('poison');
     const valueType = type.value;
+    const valueDifficulty = difficulty.value;
+    const valueSun = sun.value;
+    const valueWater = water.value;
     const valuePoison = poison.value;
 
-    const result = lists.filter((list) => list.type === valueType);
-    const resultTwo = result.filter((list) => list.poison === valuePoison);
-    const jmena = resultTwo;
+    const resultType = lists.filter((list) => list.type === valueType);
+    const resultDifficulty = resultType.filter(
+      (list) => list.difficult === valueDifficulty,
+    );
+
+    const resultSun = resultDifficulty.filter((list) => list.sun === valueSun);
+    const resultWater = resultSun.filter((list) => list.water === valueWater);
+    const resultPoison = resultWater.filter(
+      (list) => list.poison === valuePoison,
+    );
+    const jmena = resultPoison;
     jmena.forEach((jmeno) => {
       const overviewElm = document.querySelector('#overview');
       const library = document.querySelector('#overview');

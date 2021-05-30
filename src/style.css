@@ -425,6 +425,10 @@ body {
   }
 }
 
+.form-filter {
+  display: flex;
+}
+
 /* Jednotlivé stránky rostlin */
 .view-plant {
   width: 100%;
