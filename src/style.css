@@ -126,8 +126,8 @@ body {
 }
 
 .hp-content__item {
-  background-color: rgb(108, 134, 97);
   background-color: rgb(131, 124, 97);
+  transition: all 0.3s;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
 }
@@ -162,8 +162,8 @@ body {
   text-decoration: none;
 }
 
-.hp-content-click:hover {
-  filter: brightness(75%);
+.hp-content-click:hover .hp-content__item {
+  background-color: rgb(66, 62, 47);
 }
 
 .hp-content__item__heading,
@@ -322,18 +322,20 @@ body {
 .link-to-plant {
   text-decoration: none;
   background-color: rgb(131, 124, 97);
+  transition: all 0.3s;
   color: white;
   padding: 0.5rem 1rem;
   margin: 2rem 0 1rem 0;
 }
 
 .link-to-plant:hover {
-  filter: brightness(75%);
+  background-color: rgb(66, 62, 47);
 }
 
 @media (min-width: 791px) {
   .main-overview {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 2rem;
     padding-bottom: 5rem;
   }

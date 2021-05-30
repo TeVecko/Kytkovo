@@ -50,12 +50,21 @@ const potosovec = Plant({
   flowering: [],
 });
 
+const sunflower = Plant({
+  name: 'Slunečnice roční',
+  latinName: 'Helianthus annuus',
+  src: './img/sunflower.jpg',
+  flowering: [july, august],
+  href: '',
+});
+
 const overviewElm = document.querySelector('#overview');
 const library = document.querySelector('#overview');
 if (library) {
   overviewElm.appendChild(mint);
   overviewElm.appendChild(mandevila);
   overviewElm.appendChild(potosovec);
+  overviewElm.appendChild(sunflower);
 }
 
 const aphids = Article({
