@@ -110,6 +110,8 @@ body {
   /*background-image: url('./img/close.png');
   filter: invert(100%);*/
   position: fixed;
+  top: 0;
+  right: 0;
   margin-top: 1.8rem;
   margin-right: 1rem;
   border: none;
@@ -474,9 +476,37 @@ body {
 }
 
 /* Styly pro planner.html */
+.planner-description {
+  text-align: center;
+  margin: 0;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
 .planner-form {
   display: flex;
   flex-direction: column;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.planner-form__month {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  resize: none;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.planner-form__day {
+  display: flex;
+  width: 100%;
+}
+
+.btn-print {
+  margin: 0 auto 2rem;
+  display: block;
 }
 
 @media print {
