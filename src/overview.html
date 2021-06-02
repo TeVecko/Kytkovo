@@ -47,9 +47,9 @@
       </header>
       <main class="main-overview" id="overview">
         <form class="form-filter" id="form-filter">
-          <div class="select-type">
+          <div class="form-select">
             <label
-              >Typ
+              >Typ:
               <select name="type" id="type">
                 <option value="bylinky">Bylinky</option>
                 <option value="pokojovky">Pokojovky</option>
@@ -57,16 +57,16 @@
               </select>
             </label>
           </div>
-          <div class="select-difficulty">
+          <div class="form-select">
             <label
               >Náročnost:
               <select name="difficulty" id="difficulty">
-                <option value="true">Náročná</option>
-                <option value="false">Nenáročná</option>
+                <option value="false">Nenáročné</option>
+                <option value="true">Náročné</option>
               </select>
             </label>
           </div>
-          <div class="select-sun">
+          <div class="form-select">
             <label
               >Nároky na světlo:
               <select name="sun" id="sun">
@@ -76,27 +76,28 @@
               </select>
             </label>
           </div>
-          <div class="select-water">
+          <div class="form-select">
             <label
               >Nároky na vláhu:
               <select name="water" id="water">
-                <option value="nižší">Nižší</option>
-                <option value="střední">Střední</option>
                 <option value="vyšší">Vyšší</option>
+                <option value="střední">Střední</option>
+                <option value="nižší">Nižší</option>
               </select>
             </label>
           </div>
-          <div class="select-poison">
+          <div class="form-select">
             <label
               >Jedovatost:
-
               <select name="poison" id="poison">
                 <option value="true">Ano</option>
                 <option value="false">Ne</option>
               </select>
             </label>
           </div>
-          <span class="button-filter">Odeslat</span>
+          <div class="select-button">
+            <button type="button" class="button-filter">Odeslat</button>
+          </div>
         </form>
       </main>
       <footer class="footer">

@@ -36,34 +36,25 @@ const november = 10;
 const december = 11;
 
 const listPlant = {
+  foxglove: {
+    name: 'Náprstník červený',
+    latinName: 'Digitalis purpurea',
+    src: './img/foxglove.jpg',
+    flowering: [june, july, august],
+    href: '',
+  },
   mint: {
     name: 'Máta klasnatá',
     latinName: 'Mentha spicata',
     src: './img/mint-table.jpg',
     flowering: [june, july, august, september],
-    href: 'Plants/mint.html',
+    href: 'Plants/mint.html/#view-plant',
   },
   mandevila: {
     name: 'Mandevila Sanderova',
     latinName: 'Mandevilla sanderi',
     src: './img/mandevila.jpg',
     flowering: [may, june, july, august, september],
-    href: '',
-  },
-  mandrake: {
-    name: 'Mandragora lékařská',
-    latinName: 'Mandragora officinarum',
-    src: './img/mandrake.jpg',
-    flowering: [
-      september,
-      october,
-      november,
-      december,
-      january,
-      february,
-      march,
-      april,
-    ],
     href: '',
   },
   potosovec: {
@@ -87,7 +78,7 @@ const library = document.querySelector('#overview');
 if (library) {
   overviewElm.appendChild(Plant(listPlant.mint));
   overviewElm.appendChild(Plant(listPlant.mandevila));
-  overviewElm.appendChild(Plant(listPlant.mandrake));
+  overviewElm.appendChild(Plant(listPlant.foxglove));
   overviewElm.appendChild(Plant(listPlant.potosovec));
   overviewElm.appendChild(Plant(listPlant.sunflower));
 }
@@ -111,11 +102,11 @@ const lists = [
     poison: 'true',
   },
   {
-    name: 'mandrake',
+    name: 'foxglove',
     type: 'bylinky',
     difficult: 'false',
-    sun: 'polostín',
-    water: 'střední',
+    sun: 'plné slunce',
+    water: 'vyšší',
     poison: 'true',
   },
   {
