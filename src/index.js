@@ -41,7 +41,14 @@ const listPlant = {
     latinName: 'Digitalis purpurea',
     src: './img/foxglove.jpg',
     flowering: [june, july, august],
-    href: '',
+    href: 'Plants/foxglove.html/#view-plant',
+  },
+  melissa: {
+    name: 'Meduňka lékařská',
+    latinName: 'Melissa officinalis',
+    src: './img/melissa.jpg',
+    flowering: [june, july, august],
+    href: 'Plants/melissa.html/#view-plant',
   },
   mint: {
     name: 'Máta klasnatá',
@@ -55,21 +62,21 @@ const listPlant = {
     latinName: 'Mandevilla sanderi',
     src: './img/mandevila.jpg',
     flowering: [may, june, july, august, september],
-    href: '',
+    href: 'Plants/mandevila.html/#view-plant',
   },
   potosovec: {
     name: 'Potosovec zlatý',
     latinName: 'Epipremnum aureum',
     src: './img/pothos-unsplash.jpg',
     flowering: [],
-    href: '',
+    href: 'Plants/potosovec.html/#view-plant',
   },
   sunflower: {
     name: 'Slunečnice roční',
     latinName: 'Helianthus annuus',
     src: './img/sunflower.jpg',
     flowering: [july, august],
-    href: '',
+    href: 'Plants/sunflower.html/#view-plant',
   },
 };
 
@@ -77,6 +84,7 @@ const overviewElm = document.querySelector('#overview');
 const library = document.querySelector('#overview');
 if (library) {
   overviewElm.appendChild(Plant(listPlant.mint));
+  overviewElm.appendChild(Plant(listPlant.melissa));
   overviewElm.appendChild(Plant(listPlant.mandevila));
   overviewElm.appendChild(Plant(listPlant.foxglove));
   overviewElm.appendChild(Plant(listPlant.potosovec));
@@ -85,6 +93,14 @@ if (library) {
 
 // Filtrování
 const lists = [
+  {
+    name: 'melissa',
+    type: 'bylinky',
+    difficult: 'false',
+    sun: 'plné slunce',
+    water: 'vyšší',
+    poison: 'false',
+  },
   {
     name: 'mint',
     type: 'bylinky',
