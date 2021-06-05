@@ -54,6 +54,13 @@ const listPlant = {
     flowering: [september, october],
     href: 'Plants/ivy.html/#view-plant',
   },
+  fuchsia: {
+    name: 'Fuchsie',
+    latinName: 'Fuchsia sp.',
+    src: './img/fuchsia.jpg',
+    flowering: [may, june, july, august, september],
+    href: 'Plants/fuchsia.html/#view-plant',
+  },
   foxglove: {
     name: 'Náprstník červený',
     latinName: 'Digitalis purpurea',
@@ -82,6 +89,20 @@ const listPlant = {
     flowering: [may, june, july, august, september],
     href: 'Plants/mandevila.html/#view-plant',
   },
+  monstera: {
+    name: 'Monstera',
+    latinName: 'Monstera deliciosa',
+    src: './img/monstera.jpg',
+    flowering: [],
+    href: 'Plants/monstera.html/#view-plant',
+  },
+  allium: {
+    name: 'Pažitka pobřežní',
+    latinName: 'Allium schoenoprasum',
+    src: './img/allium.jpg',
+    flowering: [june, july],
+    href: 'Plants/allium.html/#view-plant',
+  },
   potosovec: {
     name: 'Potosovec zlatý',
     latinName: 'Epipremnum aureum',
@@ -96,6 +117,13 @@ const listPlant = {
     flowering: [july, august],
     href: 'Plants/sunflower.html/#view-plant',
   },
+  campanula: {
+    name: 'Zvonek karpatský',
+    latinName: 'Campanula carpatica',
+    src: './img/campanula.jpg',
+    flowering: [june, july],
+    href: 'Plants/campanula.html/#view-plant',
+  },
 };
 
 const overviewElm = document.querySelector('#overview');
@@ -103,12 +131,16 @@ const library = document.querySelector('#overview');
 if (library) {
   overviewElm.appendChild(Plant(listPlant.aloeVera));
   overviewElm.appendChild(Plant(listPlant.ivy));
+  overviewElm.appendChild(Plant(listPlant.fuchsia));
   overviewElm.appendChild(Plant(listPlant.mandevila));
   overviewElm.appendChild(Plant(listPlant.mint));
   overviewElm.appendChild(Plant(listPlant.melissa));
+  overviewElm.appendChild(Plant(listPlant.monstera));
   overviewElm.appendChild(Plant(listPlant.foxglove));
+  overviewElm.appendChild(Plant(listPlant.allium));
   overviewElm.appendChild(Plant(listPlant.potosovec));
   overviewElm.appendChild(Plant(listPlant.sunflower));
+  overviewElm.appendChild(Plant(listPlant.campanula));
 }
 
 // Filtrování
@@ -119,7 +151,7 @@ const lists = [
     difficult: 'false',
     sun: 'plné slunce',
     water: 'střední',
-    poison: 'false',
+    poison: 'true',
   },
   {
     name: 'ivy',
@@ -128,6 +160,14 @@ const lists = [
     sun: 'stín',
     water: 'vyšší',
     poison: 'true',
+  },
+  {
+    name: 'fuchsia',
+    type: 'venkovky',
+    difficult: 'false',
+    sun: 'polostín',
+    water: 'střední',
+    poison: 'false',
   },
   {
     name: 'melissa',
@@ -154,12 +194,28 @@ const lists = [
     poison: 'true',
   },
   {
+    name: 'monstera',
+    type: 'pokojovky',
+    difficult: 'false',
+    sun: 'polostín',
+    water: 'střední',
+    poison: 'true',
+  },
+  {
     name: 'foxglove',
     type: 'bylinky',
     difficult: 'false',
     sun: 'plné slunce',
     water: 'vyšší',
     poison: 'true',
+  },
+  {
+    name: 'allium',
+    type: 'bylinky',
+    difficult: 'false',
+    sun: 'polostín',
+    water: 'střední',
+    poison: 'false',
   },
   {
     name: 'potosovec',
@@ -175,6 +231,14 @@ const lists = [
     difficult: 'true',
     sun: 'plné slunce',
     water: 'vyšší',
+    poison: 'false',
+  },
+  {
+    name: 'campanula',
+    type: 'venkovky',
+    difficult: 'false',
+    sun: 'plné slunce',
+    water: 'střední',
     poison: 'false',
   },
 ];
