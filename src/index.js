@@ -47,6 +47,13 @@ const listPlant = {
     flowering: [july, august],
     href: 'Plants/aloe-vera.html/#view-plant',
   },
+  hyacinth: {
+    name: 'Hyacint východní',
+    latinName: '	Hyacinthus orientalis',
+    src: './img/hyacinth.jpg',
+    flowering: [april, may],
+    href: 'Plants/hyacinth.html/#view-plant',
+  },
   ivy: {
     name: 'Břečťan obecný',
     latinName: 'Hedera helix',
@@ -54,12 +61,33 @@ const listPlant = {
     flowering: [september, october],
     href: 'Plants/ivy.html/#view-plant',
   },
+  kalatea: {
+    name: 'Kalatea',
+    latinName: 'Calathea makoyana',
+    src: './img/kalatea.jpg',
+    flowering: [],
+    href: 'Plants/kalatea.html/#view-plant',
+  },
   fuchsia: {
     name: 'Fuchsie',
     latinName: 'Fuchsia sp.',
     src: './img/fuchsia.jpg',
     flowering: [may, june, july, august, september],
     href: 'Plants/fuchsia.html/#view-plant',
+  },
+  jasmine: {
+    name: 'Jasmín mnohokvětý',
+    latinName: 'Jasminum polyanthum',
+    src: './img/jasmine.jpg',
+    flowering: [april, may, june],
+    href: 'Plants/jasmine.html/#view-plant',
+  },
+  maranta: {
+    name: 'Maranta běložilná',
+    latinName: 'Maranta leuconeura erythroneura',
+    src: './img/maranta.jpg',
+    flowering: [],
+    href: 'Plants/maranta.html/#view-plant',
   },
   foxglove: {
     name: 'Náprstník červený',
@@ -130,9 +158,13 @@ const overviewElm = document.querySelector('#overview');
 const library = document.querySelector('#overview');
 if (library) {
   overviewElm.appendChild(Plant(listPlant.aloeVera));
+  overviewElm.appendChild(Plant(listPlant.hyacinth));
   overviewElm.appendChild(Plant(listPlant.ivy));
   overviewElm.appendChild(Plant(listPlant.fuchsia));
+  overviewElm.appendChild(Plant(listPlant.jasmine));
+  overviewElm.appendChild(Plant(listPlant.kalatea));
   overviewElm.appendChild(Plant(listPlant.mandevila));
+  overviewElm.appendChild(Plant(listPlant.maranta));
   overviewElm.appendChild(Plant(listPlant.mint));
   overviewElm.appendChild(Plant(listPlant.melissa));
   overviewElm.appendChild(Plant(listPlant.monstera));
@@ -154,6 +186,14 @@ const lists = [
     poison: 'true',
   },
   {
+    name: 'hyacinth',
+    type: 'pokojovky',
+    difficult: 'false',
+    sun: 'plné slunce',
+    water: 'střední',
+    poison: 'true',
+  },
+  {
     name: 'ivy',
     type: 'venkovky',
     difficult: 'false',
@@ -162,11 +202,35 @@ const lists = [
     poison: 'true',
   },
   {
+    name: 'jasmine',
+    type: 'venkovky',
+    difficult: 'true',
+    sun: 'plné slunce',
+    water: 'vyšší',
+    poison: 'false',
+  },
+  {
+    name: 'kalatea',
+    type: 'pokojovky',
+    difficult: 'false',
+    sun: 'polostín',
+    water: 'vyšší',
+    poison: 'false',
+  },
+  {
     name: 'fuchsia',
     type: 'venkovky',
     difficult: 'false',
     sun: 'polostín',
     water: 'střední',
+    poison: 'false',
+  },
+  {
+    name: 'maranta',
+    type: 'pokojovky',
+    difficult: 'false',
+    sun: 'polostín',
+    water: 'vyšší',
     poison: 'false',
   },
   {
