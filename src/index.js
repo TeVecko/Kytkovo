@@ -191,8 +191,22 @@ const aphids = Article({
   href: 'Articles/aphids.html',
 });
 
+const monsteraArticle = Article({
+  name: 'Monstera – ikonická pokojovka',
+  src: './img/icon-monstera.jpg',
+  href: 'Articles/monstera-article.html',
+});
+
+const starArticle = Article({
+  name: 'Vše o vánoční hvězdě',
+  src: './img/christmas-star.jpg',
+  href: 'Articles/star-article.html',
+});
+
 const articleElm = document.querySelector('#blog');
 const blog = document.querySelector('#blog');
 if (blog) {
   articleElm.appendChild(aphids);
+  articleElm.appendChild(monsteraArticle);
+  articleElm.appendChild(starArticle);
 }
