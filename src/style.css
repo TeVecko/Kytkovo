@@ -142,6 +142,7 @@ body {
   position: fixed;
   top: 0;
   background-color: rgb(131, 124, 97);
+  z-index: 100;
 }
 
 .link {
@@ -316,18 +317,34 @@ body {
 }
 
 @media (min-width: 1304px) {
+  .logo-link {
+    margin: 1rem 0 0 1.5rem;
+  }
+
+  .link {
+    font-size: 1.4rem;
+  }
+
   .hp-text__heading {
     font-size: 11rem;
   }
 
   .hp-text__description {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 3.5rem;
   }
 
   .arrow-down {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .icon-list,
+  .icon-calendar,
+  .icon-book {
+    height: 4.5rem;
+    margin-bottom: 2rem;
+    margin-top: 0.4rem;
   }
 
   .hp-content__item {
@@ -335,11 +352,11 @@ body {
   }
 
   .hp-content__item__heading {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .hp-content__item__description {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 
   .arrow-right {
@@ -347,7 +364,7 @@ body {
   }
 
   .footer {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -476,6 +493,16 @@ body {
   }
 }
 
+@media (min-width: 1304px) {
+  .name-plant {
+    font-size: 1.9rem;
+  }
+
+  .link-to-plant {
+    font-size: 1.3rem;
+  }
+}
+
 /* Jednotlivé stránky rostlin */
 .view-plant {
   padding: 4rem 2rem 3rem;
@@ -518,7 +545,6 @@ body {
     width: 50%;
     margin-right: 3rem;
   }
-
 }
 
 @media (min-width: 1320px) {
