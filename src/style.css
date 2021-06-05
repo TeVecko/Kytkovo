@@ -82,6 +82,10 @@ body {
   position: relative;
 }
 
+.nav-btn:focus {
+  outline: none;
+}
+
 .nav-btn::before {
   content: '';
   position: absolute;
@@ -201,7 +205,7 @@ body {
 .hp-content__item {
   background-color: rgb(131, 124, 97);
   transition: all 0.3s;
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   margin-bottom: 2rem;
 }
 
@@ -259,7 +263,7 @@ body {
 }
 
 .footer {
-  padding: 0.5rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
   text-align: center;
   border-top: 1px solid rgb(131, 124, 97);
   color: rgb(131, 124, 97);
