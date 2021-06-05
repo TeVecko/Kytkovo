@@ -145,7 +145,11 @@ body {
 .stripe-opened {
   position: fixed;
   top: 0;
-  background-color: rgb(131, 124, 97);
+  background-image: url('./img/cover-photo-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('./img/cover-photo-unsplash.jpg');
   z-index: 100;
 }
 
@@ -251,6 +255,10 @@ body {
 
 .hp-content__item__heading {
   margin-top: 0.5rem;
+}
+
+.hp-content__item__description {
+  line-height: 1.7;
 }
 
 .arrow-right {
@@ -595,6 +603,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 4rem 2rem 2rem 2rem;
+  line-height: 1.7;
 }
 
 .planner-form {
@@ -634,10 +643,11 @@ body {
 .col-92__input {
   width: 100%;
   padding: 0.1rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border: none;
   border-bottom: 1px solid black;
   background: none;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .btn-print {
@@ -692,6 +702,13 @@ body {
   }
 }
 
+@media (min-width: 1304px) {
+  .planner-description,
+  .btn-print {
+    font-size: 1.3rem;
+  }
+}
+
 @media print {
   .hp-header,
   .planner-description,
@@ -710,3 +727,15 @@ body {
 }
 
 /* Styly pro blog.html */
+.main-blog {
+  padding-top: 2rem;
+}
+
+@media (min-width: 845px) {
+  .main-blog {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}

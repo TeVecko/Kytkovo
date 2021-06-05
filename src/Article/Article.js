@@ -4,6 +4,7 @@ export const Article = (props) => {
 
   const nameElm = document.createElement('h2');
   nameElm.textContent = props.name;
+  nameElm.classList.add('name-plant');
 
   const imgPlant = document.createElement('img');
   imgPlant.classList.add('image-plant');
