@@ -53,7 +53,7 @@ const listPlant = {
   mint: {
     name: 'Máta klasnatá',
     latinName: 'Mentha spicata',
-    src: 'https://kytkovo.netlify.app/img/mint-table.jpg',
+    src: './img/mint-table.jpg',
     flowering: [june, july, august, september],
     href: 'Plants/mint.html/#view-plant',
   },
