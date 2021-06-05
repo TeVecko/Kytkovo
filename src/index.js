@@ -2,6 +2,7 @@ import './style.css';
 import { Plant } from './Plant/Plant';
 import { Article } from './Article/Article';
 
+// Hamburger menu
 const menu = document.querySelector('.nav-btn');
 
 menu.addEventListener('click', (event) => {
@@ -15,6 +16,7 @@ menu.addEventListener('click', (event) => {
   arrowDown.classList.toggle('arrow-down--hidden');
 });
 
+// Tisk plánovače
 const btnPrint = document.querySelector('#btn-print');
 if (btnPrint) {
   btnPrint.addEventListener('click', (event) => {
@@ -22,6 +24,7 @@ if (btnPrint) {
   });
 }
 
+// Měsíce k právě kvete
 const january = 0;
 const february = 1;
 const march = 2;
@@ -35,7 +38,22 @@ const october = 9;
 const november = 10;
 const december = 11;
 
+// Přehled rostlin
 const listPlant = {
+  aloeVera: {
+    name: 'Aloe pravá',
+    latinName: 'Aloe vera',
+    src: './img/aloe-vera.jpg',
+    flowering: [july, august],
+    href: 'Plants/aloe-vera.html/#view-plant',
+  },
+  ivy: {
+    name: 'Břečťan obecný',
+    latinName: 'Hedera helix',
+    src: './img/ivy.jpg',
+    flowering: [september, october],
+    href: 'Plants/ivy.html/#view-plant',
+  },
   foxglove: {
     name: 'Náprstník červený',
     latinName: 'Digitalis purpurea',
@@ -83,9 +101,11 @@ const listPlant = {
 const overviewElm = document.querySelector('#overview');
 const library = document.querySelector('#overview');
 if (library) {
+  overviewElm.appendChild(Plant(listPlant.aloeVera));
+  overviewElm.appendChild(Plant(listPlant.ivy));
+  overviewElm.appendChild(Plant(listPlant.mandevila));
   overviewElm.appendChild(Plant(listPlant.mint));
   overviewElm.appendChild(Plant(listPlant.melissa));
-  overviewElm.appendChild(Plant(listPlant.mandevila));
   overviewElm.appendChild(Plant(listPlant.foxglove));
   overviewElm.appendChild(Plant(listPlant.potosovec));
   overviewElm.appendChild(Plant(listPlant.sunflower));
@@ -93,6 +113,22 @@ if (library) {
 
 // Filtrování
 const lists = [
+  {
+    name: 'aloeVera',
+    type: 'pokojovky',
+    difficult: 'false',
+    sun: 'plné slunce',
+    water: 'střední',
+    poison: 'false',
+  },
+  {
+    name: 'ivy',
+    type: 'venkovky',
+    difficult: 'false',
+    sun: 'stín',
+    water: 'vyšší',
+    poison: 'true',
+  },
   {
     name: 'melissa',
     type: 'bylinky',
