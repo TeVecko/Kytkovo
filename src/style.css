@@ -478,14 +478,12 @@ body {
 
 /* Jednotlivé stránky rostlin */
 .view-plant {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 4rem 2rem 3rem;
 }
 
 .plant-image {
   width: 100%;
-  margin: 5rem 3rem 1rem 3rem;
+  margin: 0 0 1.5rem 0;
 }
 
 .plant-image__photo {
@@ -493,11 +491,11 @@ body {
 }
 
 .plant-describe {
-  margin: 2rem 3rem;
+  margin: 0;
 }
 
 .title-plant {
-  margin: 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .title-plant__latin {
@@ -511,12 +509,25 @@ body {
 }
 
 @media (min-width: 1000px) {
+  .view-plant {
+    display: flex;
+    padding: 4rem 2rem 2rem;
+  }
+
   .plant-image {
     width: 50%;
-    margin: 5rem 3rem 1rem 3rem;
+    margin-right: 3rem;
   }
+
+}
+
+@media (min-width: 1320px) {
   .plant-describe {
-    margin: 5rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  .plant-describe ul li {
+    margin: 0.5rem 0 0.5rem 0;
   }
 }
 
