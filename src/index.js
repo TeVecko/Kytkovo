@@ -525,28 +525,28 @@ if (button) {
 }
 
 // Články
-const aphids = Article({
-  name: 'Jak se zbavit mšic',
-  src: './img/aphids.jpg',
-  href: 'Articles/aphids.html',
+const toxicityArticle = Article({
+  name: 'Toxicita pokojovek a domácí mazlíčci',
+  src: './img/blog-cat.jpg',
+  href: 'Articles/toxicity-article.html#view-article',
 });
 
 const monsteraArticle = Article({
-  name: 'Monstera – ikonická pokojovka',
-  src: './img/icon-monstera.jpg',
-  href: 'Articles/monstera-article.html',
+  name: 'Co potřebujete vědět o monsteře',
+  src: './img/blog-monstera.jpg',
+  href: 'Articles/monstera-article.html#view-article',
 });
 
-const starArticle = Article({
-  name: 'Vše o vánoční hvězdě',
-  src: './img/christmas-star.jpg',
-  href: 'Articles/star-article.html',
+const shadowArticle = Article({
+  name: 'Kterým pokojovkám nevadí stín?',
+  src: './img/blog-snake-plant.jpg',
+  href: 'Articles/shadow-article.html#view-article',
 });
 
 const articleElm = document.querySelector('#blog');
 const blog = document.querySelector('#blog');
 if (blog) {
-  articleElm.appendChild(aphids);
+  articleElm.appendChild(toxicityArticle);
   articleElm.appendChild(monsteraArticle);
-  articleElm.appendChild(starArticle);
+  articleElm.appendChild(shadowArticle);
 }

@@ -585,7 +585,7 @@ body {
   }
 
   .plant-image {
-    width: 50%;
+    flex-basis: 50%;
     margin-right: 3rem;
   }
 }
@@ -743,6 +743,45 @@ body {
 }
 
 /* Styly pro články na blogu */
+.view-article {
+  padding: 4rem 2rem 3rem;
+}
+
+.article-image {
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+}
+
+.article-image__photo {
+  width: 100%;
+}
+
+.article-describe {
+  margin: 0;
+}
+
+.title-article {
+  margin: 0 0 0.5rem 0;
+}
+
+@media (min-width: 1000px) {
+  .view-article {
+    display: flex;
+    padding: 4rem 3rem 2rem 2rem;
+  }
+
+  .article-image {
+    flex-basis: 50%;
+    min-width: 50%;
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 1320px) {
+  .article-describe {
+    font-size: 1.5rem;
+  }
+}
 
 /* Styly pro about.html */
 .about {
