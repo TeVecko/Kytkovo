@@ -275,6 +275,8 @@ body {
   text-align: center;
   border-top: 1px solid rgb(131, 124, 97);
   color: rgb(131, 124, 97);
+  font-size: 0.8rem;
+  line-height: 1.7;
 }
 
 @media (min-width: 550px) {
@@ -376,7 +378,7 @@ body {
   }
 
   .footer {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -495,8 +497,8 @@ body {
   .main-overview {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 2rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
   }
 
   .plant {
@@ -737,5 +739,33 @@ body {
     flex-wrap: wrap;
     padding-top: 2rem;
     padding-bottom: 1rem;
+  }
+}
+
+/* Styly pro články na blogu */
+
+/* Styly pro about.html */
+.about {
+  padding: 4rem 2rem 4rem 2rem;
+}
+
+.about__heading {
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.about__description {
+  margin: 0;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (min-width: 1304px) {
+  .about__heading {
+    font-size: 2.3rem;
+  }
+
+  .about__description {
+    font-size: 1.3rem;
   }
 }
